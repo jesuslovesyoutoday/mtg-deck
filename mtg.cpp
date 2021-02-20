@@ -146,27 +146,27 @@ void Ghost::Draw()
 
 /*-------------------------------------------/SCELETON/----------------------------------------------------*/
 
-class Sceleton: public Creature
+class Skeleton: public Creature
 {
 	public:
-		Sceleton();
+		Skeleton();
 		void GetDescription();
 		void Draw();
 };
 
-Sceleton::Sceleton()
+Skeleton::Skeleton()
 {
 	this->mana = 4;
 	this->force = 5;
 	this->health = 2;
 }
 
-void Sceleton::GetDescription()
+void Skeleton::GetDescription()
 {
 	cout << "# Guy who will die the first #" << endl;
 }
 
-void Sceleton::Draw()
+void Skeleton::Draw()
 {
 	cout <<	       " -------------------------" << endl;
 	cout <<        "|  ---------------------  |" << endl;
@@ -182,7 +182,7 @@ void Sceleton::Draw()
 	cout <<        "| | / /\\---||---/\\ \\	| |" << endl;
 	cout <<        "| | | |	\\--||--/ | |	| |" << endl;
 	cout <<        "|  ---------------------  |" << endl;
-	cout <<        "|     S C E L E T O N	  |" << endl;
+	cout <<        "|     S K E L E T O N	  |" << endl;
 	cout <<        "|   4	-----------  5/2  |" << endl;
 	cout <<        "|_________________________|" << endl;
 }
@@ -595,7 +595,7 @@ int main()
 			creature.GetDescription();
 			cout << endl;
 
-			cout << "# -> CAT <- | -> GHOST <- | -> SCELETON <- #" << endl;
+			cout << "# -> CAT <- | -> GHOST <- | -> SKELETON <- #" << endl;
 			cout << "# (press 1) |   (press 2) |    (press 3)   #" << endl;
 			cout << endl;
 			
@@ -624,13 +624,13 @@ int main()
 			}
 			else if (input == 3)
 			{
-				Sceleton sceleton;
-				sceleton.Draw();
+				Skeleton skeleton;
+				skeleton.Draw();
 				cout << endl;
-				sceleton.GetDescription();
-				sceleton.ManaCost();
-				sceleton.GetForce();
-				sceleton.GetHealth();
+				skeleton.GetDescription();
+				skeleton.ManaCost();
+				skeleton.GetForce();
+				skeleton.GetHealth();
 			}
 
 		}
