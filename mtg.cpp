@@ -144,7 +144,7 @@ void Ghost::Draw()
 	cout << "|_________________________|" << endl;
 }
 
-/*-------------------------------------------/SCELETON/----------------------------------------------------*/
+/*-------------------------------------------/SKELETON/----------------------------------------------------*/
 
 class Skeleton: public Creature
 {
@@ -261,11 +261,19 @@ class Instant: public NotAlive
 {
 	public:
 		void GetDescription();
+		void ManaCost();
+	protected:
+		int mana;
 };
 
 void Instant::GetDescription()
 {
 	cout << "# You can cast Instants when all attackers and defenders have been chosen #" << endl;
+}
+
+void Instant::ManaCost()
+{
+	cout << "# ManaCost: " << this->mana << endl;
 }
 
 /*------------------------------------------------/FIREBALL/--------------------------------------------------*/
@@ -277,9 +285,7 @@ class FireBall: public Instant
 		void GetDescription();
 		void GetDamage();
 		void Draw();
-		void ManaCost();
 	protected:
-		int mana;
 		int damage;
 };
 
@@ -320,11 +326,6 @@ void FireBall::Draw()
 	cout << "|_________________________|" << endl;
 }
 
-void FireBall::ManaCost()
-{
-	cout << "# ManaCost: " << this->mana << endl;
-}
-
 /*-----------------------------------------------/HEALING/----------------------------------------------------*/
 
 class Healing: public Instant
@@ -334,10 +335,8 @@ class Healing: public Instant
 		void GetDescription();
 		void Draw();
 		void GetHeal();
-		void ManaCost();
 	protected:
 		int heal;
-		int mana;
 };
 
 Healing::Healing()
@@ -375,11 +374,6 @@ void Healing::Draw()
 	cout << "|      H E A L I N G	  |" << endl;
 	cout << "|   	-----------       |" << endl;
 	cout << "|_________________________|" << endl;
-}
-
-void Healing::ManaCost()
-{
-	cout << "# ManaCost: " << this->mana << endl;
 }
 
 /*-----------------------------------------------/LAND/------------------------------------------------------*/
