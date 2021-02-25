@@ -5,193 +5,110 @@ using namespace std;
 
 /*-----------------------------------------------------/MAIN/---------------------------------------------------*/
 
-
 int main()
 {
-	cout << "	 -------------------------------------------------------------------------------- " << endl;
-	cout << "	|										| " << endl;			
-	cout << "	|		 ___	    ___	    _____________      _________		| " << endl;		
-	cout << "	|		|###\\	   /###|   |#############|    /#########\\		| " << endl;		
-	cout << "	|		|####\\	  /####|    #############    |##/     \\##\\		| " << endl;	
-	cout << "	|		|#####\\  /#####|   	|###|	     |##|      ###		| " << endl;	
-	cout << "	|		|######\\/######|	|###|	     |##|    ____		| " << endl;				
-	cout << "	|		|###|\\####/|###|	|###|	     |##|   |####|		| " << endl;
-	cout << "	|		|###| \\##/ |###|	|###|	     |##|      |#|		| " << endl;
-	cout << "	|		|###|  \\/  |###|	|###|	     \\##\\      |#|		| " << endl;
-	cout << "	|		|###|	   |###|	|###|	      \\##\\_____/#/		| " << endl;
-	cout << "	|		-----	   -----	-----		########		| " << endl;
-	cout << "	|										| " << endl;
-	cout << "	|										| " << endl;
-	cout <<  "	-------------------------------------------------------------------------------  " << endl;
-
-	cout << endl;
-	cout << "# Choose a type of a card #" << endl;
-	cout << endl;
-	cout << "# -> ALIVE <- | -> NOT_ALIVE <- #" << endl;
-	cout << "#  (press 1)  |    (press 2)    #" << endl;
 	
-	cout << endl;
-	cout << endl;
+logo_print();
 	
-	int input;
-	cin >> input;
+	int again = 1;
 
-	if (input == 1)
+	while (again)
 	{
-		Alive alive;
-		alive.GetDescription();
-		cout << endl;
 
-		cout << "# -> CREATURE <- | -> PLAINSWALKER <- #" << endl;
-		cout << "#    (press 1)   |     (press 2)      #" << endl;
-		cout << endl;
-		
+		card_print();
+	
 		int input;
 		cin >> input;
+	
+		if (input == 1)
+		{
+			alive_print();
 		
-		if (input == 1)
-		{
-			Creature creature;
-			creature.GetDescription();
-			cout << endl;
-
-			cout << "# -> CAT <- | -> GHOST <- | -> SKELETON <- #" << endl;
-			cout << "# (press 1) |   (press 2) |    (press 3)   #" << endl;
-			cout << endl;
-			
 			int input;
 			cin >> input;
-
+			
 			if (input == 1)
 			{
-				Cat cat;
-				cat.Draw();
-				cout << endl;
-				cat.GetDescription();
-				cat.ManaCost();
-				cat.GetForce();
-				cat.GetHealth();
+				creature_print();
+			
+				int input;
+				cin >> input;
+
+				if (input == 1)
+				{
+					cat_print();
+				}
+				else if (input == 2)
+				{
+					ghost_print();
+				}
+				else if (input == 3)
+				{
+					skeleton_print();
+				}
+	
 			}
+		
 			else if (input == 2)
 			{
-				Ghost ghost;
-				ghost.Draw();
-				cout << endl;
-				ghost.GetDescription();
-				ghost.ManaCost();
-				ghost.GetForce();
-				ghost.GetHealth();
+				plainswalker_print();
+	
+				darkwizard_print();
 			}
-			else if (input == 3)
-			{
-				Skeleton skeleton;
-				skeleton.Draw();
-				cout << endl;
-				skeleton.GetDescription();
-				skeleton.ManaCost();
-				skeleton.GetForce();
-				skeleton.GetHealth();
-			}
-
 		}
-
+	
 		else if (input == 2)
 		{
-			Plainswalker plw;
-			plw.GetDescription();
-			cout << endl;
-
-			DarkWizard dw;
-			dw.Draw();
-			cout << endl;
-			dw.GetDescription();
-			dw.ManaCost();
-			dw.GetForce();
-			dw.GetHealth();
-		}
-	}
-
-	else if (input == 2)
-	{
-		NotAlive na;
-		na.GetDescription();
-		cout << endl;
-
-		cout << "# -> INSTANT <- | -> LAND <- #" << endl;
-		cout << "#   (press 1)   |  (press 2) #" << endl;
-
-		int input;
-		cin >> input;
-
-		if (input == 1)
-		{
-			Instant instant;
-			instant.GetDescription();
-			cout << endl;
-
-			cout << "# -> FIREBALL <- | -> HEALING <- #" << endl;
-			cout << "#    (press 1)   |   (press 2)   #" << endl;
-
+			notalive_print();
+	
 			int input;
 			cin >> input;
-
+		
 			if (input == 1)
 			{
-				FireBall fb;
-				fb.Draw();
-				cout << endl;
-				fb.GetDescription();
-				fb.ManaCost();
-				fb.GetDamage();
+				instant_print();
+	
+				int input;
+				cin >> input;
+	
+				if (input == 1)
+				{
+					fireball_print();
+				}
+	
+				else if (input == 2)
+				{
+					healing_print();
+				}
 			}
-
 			else if (input == 2)
 			{
-				Healing healing;
-				healing.Draw();
-				cout << endl;
-				healing.GetDescription();
-				healing.ManaCost();
-				healing.GetHeal();
+				land_print();
+	
+				int input;
+				cin >> input;
+	
+				if (input == 1)
+				{
+					red_print();
+				}
+	
+				else if (input == 2)
+				{
+					green_print();
+				}
+				
+				else if (input == 3)
+				{
+					blue_print();
+				}
 			}
 		}
-		else if (input == 2)
-		{
-			Land land;
-			land.GetDescription();
-			cout << endl;
 
-			cout << "# -> RED <- | -> GREEN <- | -> BLUE <- #" << endl;
-			cout << "# (press 1) |   (press 2) |  (press 3) #" << endl;
-
-			int input;
-			cin >> input;
-
-			if (input == 1)
-			{
-				Red red;
-				red.Draw();
-				cout << endl;
-				red.GetDescription();
-			}
-
-			else if (input == 2)
-			{
-				Green green;
-				green.Draw();
-				cout << endl;
-				green.GetDescription();
-			}
-			
-			else if (input == 3)
-			{
-				Blue blue;
-				blue.Draw();
-				cout << endl;
-				blue.GetDescription();
-			}
-		}
+		cout << "# Wanna begin again? (press 1 or 0) #" << endl;
+		cin >> again;
 	}
 	
 	return 0;
 }
+
