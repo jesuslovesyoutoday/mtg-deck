@@ -398,4 +398,186 @@ void Blue::Draw()
 	cout << "|_________________________|" << endl;
 }
 
-/*--------------------------------------------------------------------------------------------*/
+/*--------------------------------/INTERFACE_FUNCTIONS/----------------------------------------*/
+
+void logo_print()
+{
+	cout << "	 -------------------------------------------------------------------------------- " << endl;
+	cout << "	|										| " << endl;			
+	cout << "	|		 ___	    ___	    _____________      _________		| " << endl;		
+	cout << "	|		|###\\	   /###|   |#############|    /#########\\		| " << endl;		
+	cout << "	|		|####\\	  /####|    #############    |##/     \\##\\		| " << endl;	
+	cout << "	|		|#####\\  /#####|   	|###|	     |##|      ###		| " << endl;	
+	cout << "	|		|######\\/######|	|###|	     |##|    ____		| " << endl;				
+	cout << "	|		|###|\\####/|###|	|###|	     |##|   |####|		| " << endl;
+	cout << "	|		|###| \\##/ |###|	|###|	     |##|      |#|		| " << endl;
+	cout << "	|		|###|  \\/  |###|	|###|	     \\##\\      |#|		| " << endl;
+	cout << "	|		|###|	   |###|	|###|	      \\##\\_____/#/		| " << endl;
+	cout << "	|		-----	   -----	-----		########		| " << endl;
+	cout << "	|										| " << endl;
+	cout << "	|										| " << endl;
+	cout <<  "	-------------------------------------------------------------------------------  " << endl;
+	cout << endl;
+
+}
+
+void card_print()
+{
+	cout << "# Choose a type of a card #" << endl;
+	cout << endl;
+	cout << "# -> ALIVE <- | -> NOT_ALIVE <- #" << endl;
+	cout << "#  (press 1)  |    (press 2)    #" << endl;
+	cout << endl;
+	cout << endl;
+}
+
+void alive_print()
+{
+	Alive alive;
+	alive.GetDescription();
+	cout << endl;
+
+	cout << "# -> CREATURE <- | -> PLAINSWALKER <- #" << endl;
+	cout << "#    (press 1)   |     (press 2)      #" << endl;
+	cout << endl;
+}
+
+void creature_print()
+{
+	Creature creature;
+	creature.GetDescription();
+	cout << endl;
+
+	cout << "# -> CAT <- | -> GHOST <- | -> SKELETON <- #" << endl;
+	cout << "# (press 1) |   (press 2) |    (press 3)   #" << endl;
+	cout << endl;
+}
+
+void cat_print()
+{
+	Cat cat;
+	cat.Draw();
+	cout << endl;
+	cat.GetDescription();
+	cat.ManaCost();
+	cat.GetForce();
+	cat.GetHealth();
+}
+
+void ghost_print()
+{
+	Ghost ghost;
+	ghost.Draw();
+	cout << endl;
+	ghost.GetDescription();
+	ghost.ManaCost();
+	ghost.GetForce();
+	ghost.GetHealth();
+}
+
+void skeleton_print()
+{
+	Skeleton skeleton;
+	skeleton.Draw();
+	cout << endl;
+	skeleton.GetDescription();
+	skeleton.ManaCost();
+	skeleton.GetForce();
+	skeleton.GetHealth();
+}
+
+void plainswalker_print()
+{
+	Plainswalker plw;
+	plw.GetDescription();
+	cout << endl;
+}
+
+void darkwizard_print()
+{
+	DarkWizard dw;
+	dw.Draw();
+	cout << endl;
+	dw.GetDescription();
+	dw.ManaCost();
+	dw.GetForce();
+	dw.GetHealth();
+}
+
+void notalive_print()
+{
+	NotAlive na;
+	na.GetDescription();
+	cout << endl;
+
+	cout << "# -> INSTANT <- | -> LAND <- #" << endl;
+	cout << "#   (press 1)   |  (press 2) #" << endl;
+}
+
+void instant_print()
+{
+	Instant instant;
+	instant.GetDescription();
+	cout << endl;
+
+	cout << "# -> FIREBALL <- | -> HEALING <- #" << endl;
+	cout << "#    (press 1)   |   (press 2)   #" << endl;
+}
+
+void fireball_print()
+{
+	FireBall fb;
+	fb.Draw();
+	cout << endl;
+	fb.GetDescription();
+	fb.ManaCost();
+	fb.GetDamage();
+}
+
+void healing_print()
+{
+	Healing healing;
+	healing.Draw();
+	cout << endl;
+	healing.GetDescription();
+	healing.ManaCost();
+	healing.GetHeal();
+}
+
+void land_print()
+{
+	Land land;
+	land.GetDescription();
+	cout << endl;
+
+	cout << "# -> RED <- | -> GREEN <- | -> BLUE <- #" << endl;
+	cout << "# (press 1) |   (press 2) |  (press 3) #" << endl;
+
+}
+
+void red_print()
+{
+	Red red;
+	red.Draw();
+	cout << endl;
+	red.GetDescription();
+
+}
+
+void green_print()
+{
+	Green green;
+	green.Draw();
+	cout << endl;
+	green.GetDescription();
+}
+
+void blue_print()
+{
+	Blue blue;
+	blue.Draw();
+	cout << endl;
+	blue.GetDescription();
+}
+
+/*---------------------------------------------------------------------------------------*/
