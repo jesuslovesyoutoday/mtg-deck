@@ -240,6 +240,45 @@ class Blue: public Land
 		char color;
 };
 
+/*-------------------------------------/INTERFACE_FUNCTION/------------------------------------*/
+
+// Functions that draw blocks 
+// in program logic;
+
+void logo_print();
+
+void card_print();
+
+void alive_print();
+
+void creature_print();
+
+void cat_print();
+
+void ghost_print();
+
+void skeleton_print();
+
+void plainswalker_print();
+
+void darkwizard_print();
+
+void notalive_print();
+
+void instant_print();
+
+void fireball_print();
+
+void healing_print();
+
+void land_print();
+
+void red_print();
+
+void green_print();
+
+void blue_print();
+
 /*----------------------------------------------------------------------------------------------*/
 
 #endif // CARD_IS_DEFINED
